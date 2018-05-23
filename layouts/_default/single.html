@@ -14,18 +14,6 @@
     {{ .TableOfContents }}
     </div>
     {{ .Content }}
-
-    {{ if .IsTranslated }}
-      <h4>{{ i18n "translations" }}</h4>
-      <ul>
-        {{ range .Translations }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Lang }}: {{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
     {{ partial "related" . }}
 
 </article>
